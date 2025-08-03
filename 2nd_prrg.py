@@ -1,9 +1,13 @@
-num1_str = input("Enter the first number: ")
-num2_str = input("Enter the second number: ")
+import array as arr
 
-# Convert input strings to numbers (integers or floats)
-num1 = float(num1_str)
-num2 = float(num2_str)
+# Using the array module for homogeneous data
+my_array = arr.array('i', [1, 2, 3, 4, 5])
+print(f"Array created using array module: {my_array}")
 
-sum_result = num1 + num2
-print("The sum of", num1, "and", num2, "is:", sum_result)
+# Using a Python list (more common)
+my_list = [10, 20, 30, 40, 50]
+print(f"List created: {my_list}")
+
+# Accessing elements by index
+print(f"First element of list: {my_list[0]}")
+print(f"Third element of array: {my_array[2]}")
