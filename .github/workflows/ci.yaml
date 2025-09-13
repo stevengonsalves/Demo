@@ -23,11 +23,13 @@ jobs:
           go-version: 1.22
 
       - name: Build
-        run: go build -o go-web-app
+        run: |
+          # If your main.go is in root, keep "./"
+          go build -o go-web-app ./  
 
       - name: Test
         run: go test ./...
-  
+
   code-quality:
     runs-on: ubuntu-latest
     steps:
@@ -38,7 +40,7 @@ jobs:
         uses: golangci/golangci-lint-action@v6
         with:
           version: v1.56.2
-  
+
   docker-push:
     runs-on: ubuntu-latest
     needs: build
