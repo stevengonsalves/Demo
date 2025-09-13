@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: steevan1/go-web-app
   pullPolicy: IfNotPresent
-  tag: "10016307834"
+  tag: "v1"
 
 serviceAccount:
   create: true
